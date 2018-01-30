@@ -30,3 +30,15 @@ echo 'Olen '.$eesNimi.' '.$pereNimi.'<br />';
 echo 'Soidan koolist kesklinna bussiga numberiga '.$bussiNumber.'<br />';
 echo 'Jouan kesklinna '.$soiduKestvus. ' tunniga<br />';
 echo 'Midagi konstantset? PI = '.NUMBER_PI.'<br />';
+
+// tingimuslaused
+
+$ilmvaljas = 'sajab lund';
+if($ilmvaljas == 'sajab lund'){
+    echo 'Tuleb minna sauna <br />';
+} else {
+    echo 'Pole motet sauna minna <br />';
+}
+
+// ? operaator - ternary operaator
+echo ($ilmvaljas == 'sajab lund') ? 'Tuleb minna sauna <br />' : 'Pole motet minna<br />';
