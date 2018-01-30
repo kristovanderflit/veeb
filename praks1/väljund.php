@@ -13,3 +13,6 @@
  * kommentaar
  */
 
+// väljastada teksti
+echo 'Aine - veebiprogrammeerimine'.'<br />'; // käsu lõpp - ;
+print 'valikaine<br / >';
