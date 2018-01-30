@@ -20,6 +20,13 @@ print 'valikaine<br / >';
 $eesNimi = 'Kristo'; // eesnimi , string
 $pereNimi = 'Vanderflit'; // perenimi, string
 $bussiNumber = 4; // bussi number, see on täisarv, integer
-$soiduKestvus = 0.8; // sõidu kestvus, 0.8 tundi
+$soiduKestvus = 0.5; // sõidu kestvus, 0.5 tundi
 // konstandite defineerimine
 define('NUMBER_PI', 3.14);
+// Kasutades eel defineeritud muutujad ja konstandid
+// v'ljasta ilusa teksti
+
+echo 'Olen '.$eesNimi.' '.$pereNimi.'<br />';
+echo 'Soidan koolist kesklinna bussiga numberiga '.$bussiNumber.'<br />';
+echo 'Jouan kesklinna '.$soiduKestvus. ' tunniga<br />';
+echo 'Midagi konstantset? PI = '.NUMBER_PI.'<br />';
