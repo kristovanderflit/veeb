@@ -44,5 +44,5 @@ function loeVormFailist($failiNimi){
        echo 'Probleem '.$failiNimi.' failiga<br />';
        exit;
     }
-    ecgo $sisu;
+    echo $sisu;
 }
