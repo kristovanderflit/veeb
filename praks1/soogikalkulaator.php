@@ -51,8 +51,15 @@ $kasutajad = array(
     )
 );
 // vaatame $kasutaja masiivi l'bi
+foreach ($kasutajad as $kasutajad) {
+        // kutsume funktisoone toole
+        $soogiHind = soogiHind(2.65, $kasutajad['soodus'], $kasutajad['opilaskaart']);
+        echo 'Prae hind ' . $kasutajad['roll'] . ' = ' . round($soogiHind, 2) . ' €<br />';
+
+}
 // for (tjm defineerimine; tjm kehtivuse kontroll; tjm suurendamine/v'hendamine)
-for($i = 0; $i < count($kasutajad); $i++){
+/*for($i = 0; $i < count($kasutajad); $i++){
     $soogiHind = soogiHind(2.65, $kasutajad[$i][0], $kasutajad[$i][1]);
     echo 'Prae hind  = '.round($soogiHind, 2).'<br />';
 }
+*/
