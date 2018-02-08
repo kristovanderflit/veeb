@@ -34,9 +34,21 @@ function soogiHind($taisHind, $soodusKaart = false, $kasOledOpilane = false){
 //2. real on opetaja andmed
 //3. real on kulaline andmed
 $kasutajad = array(
-    array(true, true),
-    array(true, false),
-    array(false, false)
+    array(
+        'roll' => 'opilane',
+        'soodus' => true,
+        'opilaskaart' => true
+    ),
+    array(
+    'roll' => 'opetaja',
+        'soodus' => true,
+        'opilaskaart' => false
+    ),
+    array(
+        'roll' => 'kulaline',
+        'soodus' => false,
+        'opilaskaart' => false
+    )
 );
 // vaatame $kasutaja masiivi l'bi
 // for (tjm defineerimine; tjm kehtivuse kontroll; tjm suurendamine/v'hendamine)
