@@ -17,6 +17,10 @@ require_once 'funktsioon.php'; //liigip''s funktsioonid.php failile
 //v'ljastame html-i vorm
 loeVormFailist('vorm.html');
 
+var_dump($_POST);
+echo '<br />';
+print_r($_POST);
+echo '</pre>';
 // testimiseks paneme erinevad vaartused paika
 // kasutame selleks massiivid (soodusKaart, kasOledOpilane)
 // kasutajad on tabel (massiiv), kus
