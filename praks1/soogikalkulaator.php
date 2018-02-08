@@ -50,16 +50,42 @@ $kasutajad = array(
         'opilaskaart' => false
     )
 );
-// vaatame $kasutaja masiivi l'bi
-foreach ($kasutajad as $kasutajad) {
-        // kutsume funktisoone toole
-        $soogiHind = soogiHind(2.65, $kasutajad['soodus'], $kasutajad['opilaskaart']);
-        echo 'Prae hind ' . $kasutajad['roll'] . ' = ' . round($soogiHind, 2) . ' €<br />';
 
+// erinevad soogid
+$praed = array(
+    array(
+        'nimetus' => 'Šnitsel',
+        'kirjeldus' => 'šnitsel sealihast, lisand, kaste, salat, leib',
+        'hind' => 2.68
+    ),
+    array(
+        'nimetus' => 'Seapraad',
+        'kirjeldus' => 'seapraad, lisand, kaste, salat, leib',
+        'hind' => 2.65
+    ),
+    array(
+        'nimetus' => 'Seapraad',
+        'kirjeldus' => 'seapraad, lisand, kaste, salat, leib',
+        'hind' => 2.65
+    ),
+    array(
+        'nimetus' => 'Hakklihapallid tomatikastmes',
+        'kirjeldus' => 'hakklihapall 2 tk, lisand, kaste, salat, leib',
+        'hind' => 2.30
+    ),
+    array(
+        'nimetus' => 'Hakklihapallid tomatikastmes 1/2',
+        'kirjeldus' => 'hakklihapall, lisand, kaste, salat, leib',
+        'hind' => 1.30
+    )
+);
+foreach ($praed as $praad){
+    echo '<h1>'.$praad['nimetus'].'</h1>';
+    echo '<code>'.$praad['kirjeldus'].'</code><br />';
+    echo '<ul>';
+    foreach ($kasutajad as $kasutaja){
+        $soogiHind = soogiHind($praad['hind'], $kasutaja['soodus'], $kasutaja['opilaskaart']);
+        echo '<dd>Prae hind '.$kasutaja['roll'].' = '.round($soogiHind, 2).' €</dd><br />';
+    }
+    echo '</ul>';
 }
-// for (tjm defineerimine; tjm kehtivuse kontroll; tjm suurendamine/v'hendamine)
-/*for($i = 0; $i < count($kasutajad); $i++){
-    $soogiHind = soogiHind(2.65, $kasutajad[$i][0], $kasutajad[$i][1]);
-    echo 'Prae hind  = '.round($soogiHind, 2).'<br />';
-}
-*/
