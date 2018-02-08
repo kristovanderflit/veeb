@@ -26,15 +26,22 @@ function soogiHind($taisHind, $soodusKaart = false, $kasOledOpilane = false){
     return $soodusHind;
 }// funktsiooni lõpp
 
+
+// testimiseks paneme erinevad vaartused paika
+// kasutame selleks massiivid (soodusKaart, kasOledOpilane)
+$opilane = array(true, true); // olemas soodus  - $opilane[0] ja oled opilane - $opilane[1]
+$opetaja = array(true, false); // olemas soodus aga opilane ei ole
+$kulaline = array(false, false); // pole soodustust ja pole opilane
+
 // kutsume finktsiooni toole
 // kui oled opilane
-$soogiHind = soogiHind(2.65, true,true);
+$soogiHind = soogiHind(2.65, $opilane[0], $opilane[1]);
 echo 'Prae hind opilasele = '.round($soogiHind, 2).'<br />';
 //Kui olemas kliendi kaart, aga pole opilane
-$soogiHind = soogiHind(2.65, true,false);
+$soogiHind = soogiHind(2.65,$opetaja[0], $opetaja[1]);
 echo 'Prae hind sooduskaardi omanikule = '.round($soogiHind, 2).'<br />';
 // Kui ei ole kliendi kaart
-$soogiHind = soogiHind(2.65);
+$soogiHind = soogiHind(2.65, $kulaline[0], $kulaline[1]);
 echo 'Prae hind  = '.round($soogiHind, 2).'<br />';
 
 
