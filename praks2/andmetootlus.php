@@ -25,3 +25,5 @@ echo $aeg.'<br />';
 
 //tekitamine yhendus
 $yhedus = yhendus();
+//andmete saatmiseks koostame p'rting
+$sql = 'INSERT INTO andmed SET '.
