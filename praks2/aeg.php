@@ -43,7 +43,7 @@ function aasta(){
 }
 function registreerimisVorm(){
     echo '
-    <form action="" method="post">
+    <form action="andmetootlus.php" method="post">
         <table>
             <tr>
                 <td>Eesnimi</td>
