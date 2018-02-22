@@ -7,8 +7,12 @@
  */
 
 function paev(){
+    $hetkePaev = date('j', time());
     $valik = '<select name="paev">';
     for($paev = 1; $paev < 32; $paev++){
+        if($paev == $hetkePaev){
+            $valik = $valik.'<option value="'.$paev.'" selected>'.$paev.'</option>';
+        }
         $valik = $valik.'<option value="'.$paev.'">'.$paev.'</option>';
     }
     $valik = $valik.'</select>';
@@ -22,8 +26,12 @@ function kuu(){
         $kuuNumber = date('m', mktime(0, 0, 0, $i));
         $kuud[$kuuNumber] = $kuuNimi;
     }
+    $hetkeKuu = date('m', time());
     $valik = '<select name="kuu">';
     foreach($kuud as $kuuNumber => $kuuNimi){
+        if($kuuNumber == $hetkeKuu){
+            $valik = $valik.'<option value="'.$kuuNumber.'" selected>'.$kuuNimi.'</option>';
+        }
         $valik = $valik.'<option value="'.$kuuNumber.'">'.$kuuNimi.'</option>';
     }
     $valik = $valik.'</select>';
