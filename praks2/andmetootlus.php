@@ -5,7 +5,7 @@
  * Date: 22.02.2018
  * Time: 13:01
  */
-
+require_once 'ab_fn.php';
 echo '<pre>';
 print_r($_POST);
 echo '</pre>';
