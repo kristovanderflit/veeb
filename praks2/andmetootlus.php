@@ -22,3 +22,6 @@ echo $paev.'<br />';
 // ehitame ajaväärtus DATE formaadi järgi
 $aeg = $aasta.'-'.$kuu.'-'.$paev;
 echo $aeg.'<br />';
+
+//tekitamine yhendus
+$yhedus = yhendus();
